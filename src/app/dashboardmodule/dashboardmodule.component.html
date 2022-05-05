@@ -1,0 +1,37 @@
+<mat-card class="content">
+
+    <div class="contentPage formatter">
+        <div>
+            <div class="item" cdkDrag>
+                {{this.data.id}}
+            </div>
+            <div class="item" cdkDrag>
+                {{this.data.sideData}}
+            </div>
+        </div>
+    </div>
+    <div class="contentPage">
+        <mat-tab-group style="width: 90%; border: 1px solid black;" [selectedIndex]="selTab"
+            (selectedIndexChange)="changeData($event)">
+            <mat-tab *ngFor="let tab of tabs; let i = index" [label]="tab">
+                <span style="display: flex;flex-grow: 1;">
+                    Contents for {{tab}} tab
+                </span>
+                <button (click)="deleteTab(i)" mat-raised-button class="example-delete-tab-button" [disabled]="i=== 0">
+                    Delete Tab
+                </button>
+            </mat-tab>
+            <mat-tab disabled>
+                <ng-template mat-tab-label>
+
+                    <mat-icon (click)="addTab()">add_circle</mat-icon>
+
+                </ng-template>
+            </mat-tab>
+        </mat-tab-group>
+
+    </div>
+    <div class="contentPage">
+        <p>{{this.prikaz}}</p>
+    </div>
+</mat-card>

@@ -1,16 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutMainComponent } from './layout-main/layout-main.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { LayoutSideComponent } from './layout-main/layout-side/layout-side.component';
+import { LayoutTabComponent } from './layout-main/layout-tab/layout-tab.component';
+import {MatSidenavModule} from '@angular/material/sidenav'; 
+import {MatMenuModule} from '@angular/material/menu'; 
+import {DragDropModule} from '@angular/cdk/drag-drop';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LayoutMainComponent,
+    LayoutSideComponent,
+    LayoutTabComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatMenuModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
