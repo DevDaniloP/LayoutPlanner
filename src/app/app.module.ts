@@ -9,7 +9,6 @@ import { LayoutSideComponent } from './layout-main/layout-side/layout-side.compo
 import { LayoutTabComponent } from './layout-main/layout-tab/layout-tab.component';
 import {MatSidenavModule} from '@angular/material/sidenav'; 
 import {MatMenuModule} from '@angular/material/menu'; 
-import {DragDropModule} from '@angular/cdk/drag-drop';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +24,6 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatToolbarModule,
     MatSidenavModule,
     MatMenuModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
